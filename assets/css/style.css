@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* font-family: 'Bebas Neue', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* font-family: 'Anton', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+/* font-family: 'Kaushan Script', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+/* font-family: 'Padauk', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+/* font-family: 'Comfortaa', cursive; */
+
+:root {
+    /* --color-background: #F4C752; */
+    --color-background: #a628fa;
+    /* --color-primary: #E44C4A; */
+    --color-primary: rgb(108, 55, 255);
+    --color-secondary: #000000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url('../img/blurry-gradient-haikei.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+fieldset{
+    width: 60%;
+    margin: auto;
+    background-image: linear-gradient(rgba(113, 65, 202, 0.4),rgba(57, 83, 187, 0.4));
+    border: 3px solid black;
+    box-shadow: 3px 9px 47px -1px rgba(0,0,0,0.75);
+    border-radius: 25px;
+    min-height: 60vh;
+}
+
+legend h1{
+    text-align: left;
+    font-size: 4em;
+    padding-bottom: 10px;
+    color: whitesmoke;
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.4);
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+select{
+    padding: 10px;
+    width: 150px;
+    border: 2px solid dodgerblue;
+    border-radius: 5%;
+}
+
+p{
+    padding: 10px;
+    color: whitesmoke;
+    font-size: 25px;
+    font-family: 'Anton', sans-serif;
+}
+
+select option {
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #000;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 15px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+#show{
+    color: whitesmoke;
+    font-size: 50px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bn5 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+  
+  .bn5:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowingbn5 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .bn5:active {
+    color: #000;
+  }
+  
+  .bn5:active:after {
+    background: transparent;
+  }
+  
+  .bn5:hover:before {
+    opacity: 1;
+  }
+  
+  .bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
